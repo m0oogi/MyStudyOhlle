@@ -1,4 +1,4 @@
-package com.mystudyohlle.domain.account;
+package com.mystudyohlle.account;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
