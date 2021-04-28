@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 //Entity는 기본적으로 primary key가 필요하다
 //id만 사용하는 이유는 찾아보기 (연관관계가 복잡해질때 순환참조하느라 무한루프가 발생 stackoverflow가 발생할 수 있다 )
@@ -54,5 +55,9 @@ public class Account {
     private boolean studyUpdatedByEmail;
 
     private boolean studyUpdatedByWeb;
+
+    public void generateEmailCheckToken() {
+        this.emailCheckToken = UUID.randomUUID().toString();
+    }
 
 }
